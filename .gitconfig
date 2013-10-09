@@ -1,0 +1,45 @@
+[user]
+	name = John Whitley
+	email = john@luminous-studios.com
+[alias]
+	cat = "!cat .git/config"
+	co = checkout
+	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
+	fp = first-push
+	h = !git head
+	head = !git l -1
+	hp = "!zsh -c 'source ~/.githelpers && show_git_head'"
+	r = !git l -30
+	ra = !git r --all
+	l = "!zsh -c 'source ~/.githelpers && pretty_git_log'"
+	la = !git l --all
+	lns = log --name-status
+	pr = pull-request
+	st = status
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+	ksshow = "!f() { local SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA; }; f"
+[color]
+	ui = auto
+[core]
+	pager = less -FSRX
+	excludesfile = ~/.git-global-ignores
+	quotepath = false
+[github]
+	user = jwhitley
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+	algorithm = patience
+[push]
+	default = upstream
+[mergetool]
+	keepBackup = true
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true

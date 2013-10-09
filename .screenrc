@@ -1,0 +1,15 @@
+#screen /usr/bin/gnuclient -nw
+#screen /Applications/XEmacs.app/Contents/MacOS/XEmacs -nw
+#number 0
+vbell off
+
+bell '~Bell in window %'
+defwrap on
+defflow off
+
+nethack on
+escape ^]]
+bind a  paste .
+bind ^a paste .
+
+termcapinfo xterm* ti@:te@
