@@ -13,7 +13,7 @@
 	ra = !git r --all
 	l = "!zsh -c 'source ~/.githelpers && pretty_git_log'"
 	la = !git l --all
-	lns = log --name-status
+	lns = log --name-status --decorate=short
 	pr = pull-request
 	st = status
 	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
