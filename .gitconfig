@@ -18,6 +18,7 @@
 	st = status
 	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
 	ksshow = "!f() { local SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA; }; f"
+	vimdiff = difftool -y -t vimdiff
 [color]
 	ui = auto
 [core]
