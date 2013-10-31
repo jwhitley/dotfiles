@@ -4,6 +4,7 @@
 [alias]
 	cat = "!cat .git/config"
 	co = checkout
+	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
 	h = !git head
