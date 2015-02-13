@@ -1,3 +1,8 @@
 :set +m
 :set prompt "λ > "
 :set prompt2 "λ | "
+
+import IPPrint.Colored
+:set -interactive-print=IPPrint.Colored.cpprint
+:def cp (\_ -> return ":set -interactive-print=IPPrint.Colored.cpprint")
+:def ncp (\_ -> return ":set -interactive-print=print")
