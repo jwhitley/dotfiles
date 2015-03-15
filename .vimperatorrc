@@ -1,0 +1,22 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+source! /Users/whitley/.vimperatorrc.local
+
+set defsearch=google
+
+let mapleader=";"
+
+nnoremap <leader>\' <C-^>
+
+nnoremap <leader>t :set gui=none,tabs<cr>
+nnoremap <leader>T :set gui=addons,nobookmarks,menu,navigation,tabs<cr>
+
+nnoremap <Right> gt
+nnoremap <Left> gT
+
+" Turn off Vimperator mappings on these sites
+ignorekeys clear
+ignorekeys add feedly\.com
+ignorekeys add fastmail\.com
+
+" vim: set ft=vimperator:
