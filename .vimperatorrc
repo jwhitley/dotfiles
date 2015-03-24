@@ -7,6 +7,7 @@ set defsearch=google
 let mapleader=";"
 
 nnoremap <leader>\' <C-^>
+nnoremap <leader>; :nohlsearch<cr>
 
 nnoremap <leader>t :set gui=none,tabs<cr>
 nnoremap <leader>T :set gui=addons,nobookmarks,menu,navigation,tabs<cr>
@@ -18,5 +19,6 @@ nnoremap <Left> gT
 ignorekeys clear
 ignorekeys add feedly\.com
 ignorekeys add fastmail\.com
+" ignorekeys add \.pdf$
 
 " vim: set ft=vimperator:
