@@ -5,6 +5,7 @@
 	cat = "!cat .git/config"
 	co = checkout
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
+	dt = difftool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
 	h = !git head
@@ -30,15 +31,13 @@
 [github]
 	user = jwhitley
 [merge]
-	tool = Kaleidoscope
+	tool = bc
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool "bc4"]
-	cmd = bcomp \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [diff]
-	tool = Kaleidoscope
+	tool = bc
 	algorithm = patience
 [push]
 	default = upstream
