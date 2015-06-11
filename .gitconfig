@@ -10,10 +10,10 @@
 	fp = first-push
 	h = !git head
 	head = !git l -1
-	hp = "!zsh -c 'source ~/.githelpers && show_git_head'"
+	hp = "!f() { source ~/.githelpers; show_git_head; }; f"
 	r = !git l -30
 	ra = !git r --all
-	l = "!zsh -c 'source ~/.githelpers && pretty_git_log'"
+	l = "!f() { source ~/.githelpers; pretty_git_log $*; }; f"
 	la = !git l --all
 	lns = log --name-status --decorate=short
 	man = help
