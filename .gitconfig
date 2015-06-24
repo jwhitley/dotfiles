@@ -10,7 +10,7 @@
 	fp = first-push
 	h = !git head
 	head = !git l -1
-	hp = "!f() { source ~/.githelpers; show_git_head; }; f"
+	hp = "!f() { source ~/.githelpers; show_git_head $*; }; f"
 	r = !git l -30
 	ra = !git r --all
 	l = "!f() { source ~/.githelpers; pretty_git_log $*; }; f"
