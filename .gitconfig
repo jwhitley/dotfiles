@@ -8,13 +8,12 @@
 	dt = difftool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
-	h = !git head
-	head = !git l -1
-	hp = "!f() { source ~/.githelpers; show_git_head $*; }; f"
-	r = !git l -30
-	ra = !git r --all
-	l = "!f() { source ~/.githelpers; pretty_git_log $*; }; f"
-	la = !git l --all
+	h = pretty-log -1
+	sh = pretty-head
+	r = pretty-log -30
+	ra = r --all
+	l = pretty-log
+	la = l --all
 	lns = log --name-status --decorate=short
 	man = help
 	pr = pull-request
