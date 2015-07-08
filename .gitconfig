@@ -2,7 +2,7 @@
 	name = John Whitley
 	email = john@luminous-studios.com
 [alias]
-	cat = "!cat $(git rev-parse --git-dir 2>/dev/null)/config"
+	cat = "!f() { cat $(git rev-parse --git-dir 2>/dev/null)/config; }; f"
 	co = checkout
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	dt = difftool
