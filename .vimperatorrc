@@ -4,10 +4,17 @@ source! /Users/whitley/.vimperatorrc.local
 
 set defsearch=google
 
+# Vimperator doesn't handle <space> as <leader> without an enormous hack.
+# See https://github.com/vimperator/vimperator-labs/issues/10#issuecomment-127779604
+#
 let mapleader=";"
+map <space> <leader>
 
 nnoremap <leader>\' <C-^>
-nnoremap <leader>; :nohlsearch<cr>
+
+# Logically this is <leader><leader>, but due to the Vimperator <space> as <leader> hack,
+# I've got to use <leader><space>
+nnoremap <leader><space> :nohlsearch<cr>
 
 nnoremap <leader>t :set gui=none,tabs<cr>
 nnoremap <leader>T :set gui=addons,nobookmarks,menu,navigation,tabs<cr>
