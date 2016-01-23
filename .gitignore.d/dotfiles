@@ -12,13 +12,13 @@
 !/.ghci
 !/.git-global-ignores
 !/.gitconfig
-!/.gitignore
 !/.gitignore.d
 !/.gitignore.d/dotfiles
 !/.hgignore_global
 !/.htoprc
 !/.irbrc
 !/.jshintrc
+!/.npmrc
 !/.powconfig
 !/.pryrc
 !/.screenrc
