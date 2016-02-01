@@ -1,3 +1,5 @@
+--langmap=MatLab:
+
 --langdef=Go
 --langmap=Go:.go
 --regex-Go=/^[\t]*func[ \t]+([a-zA-Z0-9_]+)/\1/f,func/
