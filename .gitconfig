@@ -9,6 +9,7 @@
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
 	h = pretty-log -1
+	lab = repo lab
 	sh = pretty-head
 	r = pretty-log -30
 	ra = r --all
