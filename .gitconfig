@@ -5,6 +5,7 @@
 	cat = "!f() { cat $(git rev-parse --git-dir 2>/dev/null)/config; }; f"
 	co = checkout
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
+	done = "!f() { git checkout master && git pull && git cleanup }"
 	dt = difftool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
@@ -48,8 +49,9 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [include]
   path = .gitconfig.local
