@@ -5,7 +5,7 @@
 	cat = "!f() { cat $(git rev-parse --git-dir 2>/dev/null)/config; }; f"
 	co = checkout
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
-	done = "!f() { git checkout master && git pull && git cleanup }"
+	done = "!f() { git checkout master && git pull && git cleanup; }; f"
 	dt = difftool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
