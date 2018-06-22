@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 13,
 
     // font family with optional fallbacks
     fontFamily: '"Source Code Pro for Powerline", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
@@ -23,10 +23,6 @@ module.exports = {
 
     // custom css to embed in the main window
     css: '',
-
-    // custom css to embed in the terminal window
-    termCSS: 'x-row {font-weight: 400}',
-
 
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '12px 14px',
