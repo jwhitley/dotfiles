@@ -26,8 +26,8 @@
 [color]
 	ui = auto
 [core]
-	pager = less -FSRX
 	excludesfile = ~/.git-global-ignores
+	pager = less -FSRX
 	quotepath = false
 [github]
 	user = jwhitley
