@@ -56,3 +56,5 @@
 	clean = git-lfs clean -- %f
 [include]
   path = .gitconfig.local
+[pull]
+	rebase = true
