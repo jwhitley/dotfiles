@@ -7,6 +7,7 @@
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	done = "!f() { git checkout master && git pull && git cleanup; }; f"
 	dt = difftool -d
+	mt = mergetool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
 	h = pretty-log -1
