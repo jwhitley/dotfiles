@@ -32,24 +32,30 @@
 	quotepath = false
 [github]
 	user = jwhitley
-[merge]
-	tool = bc
 [difftool]
 	prompt = false
 [diff]
 	tool = bc
 	algorithm = patience
+[difftool "bc"]
+	cmd = bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\"
 [diff "minjs"]
 	textconv = js-beautify
 	cachetextconv = true
 [diff "mincss"]
 	textconv = js-beautify --css
 	cachetextconv = true
-[push]
-	default = upstream
+[merge]
+	tool = bc
 [mergetool]
 	keepBackup = true
 	prompt = false
+[mergetool "bc"]
+	cmd = "!f() { if [[ -n \"$BASE\" ]]; then bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\" \"$BASE\" -mergeoutput=\"$MERGED\"; else bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\" mergeoutput=\"$MERGED\"; fi }"
+[pull]
+	rebase = true
+[push]
+	default = upstream
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
@@ -57,5 +63,3 @@
 	clean = git-lfs clean -- %f
 [include]
   path = .gitconfig.local
-[pull]
-	rebase = true
