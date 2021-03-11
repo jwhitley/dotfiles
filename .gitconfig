@@ -63,3 +63,5 @@
 	clean = git-lfs clean -- %f
 [include]
   path = .gitconfig.local
+[init]
+	defaultBranch = main
