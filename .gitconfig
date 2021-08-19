@@ -21,8 +21,7 @@
 	man = help
 	pr = pull-request
 	st = status
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
-	ksshow = "!f() { local SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA; }; f"
+	wt = worktree
 	vimdiff = difftool -y -t vimdiff
 [color]
 	ui = auto
@@ -37,8 +36,6 @@
 [diff]
 	tool = bc
 	algorithm = patience
-[difftool "bc"]
-	cmd = bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\"
 [diff "minjs"]
 	textconv = js-beautify
 	cachetextconv = true
@@ -50,8 +47,6 @@
 [mergetool]
 	keepBackup = true
 	prompt = false
-[mergetool "bc"]
-	cmd = "!f() { if [[ -n \"$BASE\" ]]; then bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\" \"$BASE\" -mergeoutput=\"$MERGED\"; else bcomp -expandall -solo \"$LOCAL\" \"$REMOTE\" mergeoutput=\"$MERGED\"; fi }"
 [pull]
 	rebase = true
 [push]
