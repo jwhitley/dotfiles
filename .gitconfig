@@ -22,6 +22,7 @@
 	pr = pull-request
 	st = status
 	wt = worktree
+	wl = worktree list
 	vimdiff = difftool -y -t vimdiff
 [color]
 	ui = auto
