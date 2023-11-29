@@ -30,6 +30,7 @@
 	excludesfile = ~/.git-global-ignores
 	pager = less -FSRX
 	quotepath = false
+	attributesfile = ~/.gitattributes
 [github]
 	user = jwhitley
 [difftool]
@@ -37,12 +38,14 @@
 [diff]
 	tool = bc
 	algorithm = patience
-[diff "minjs"]
-	textconv = js-beautify
-	cachetextconv = true
 [diff "mincss"]
 	textconv = js-beautify --css
 	cachetextconv = true
+[diff "minjs"]
+	textconv = js-beautify
+	cachetextconv = true
+[diff "swift"]
+    xfuncname = ^[ \t]*(((private |public |internal |final |open )*class|(private |public |internal )*struct|(private |public |internal )*actor|(private |public |internal )*func|(private |public |internal )*extension|(private |public |internal )*enum)[ \t].*)$
 [merge]
 	tool = bc
 [mergetool]
