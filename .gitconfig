@@ -35,6 +35,8 @@
 	user = jwhitley
 [difftool]
 	prompt = false
+[difftool "bc"]
+	cmd = bcomp -expandall "$LOCAL" "$REMOTE"
 [diff]
 	tool = bc
 	algorithm = patience
@@ -51,6 +53,8 @@
 [mergetool]
 	keepBackup = true
 	prompt = false
+[mergetool "bc"]
+	cmd = bcomp -expandall "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 [pull]
 	rebase = true
 [push]
