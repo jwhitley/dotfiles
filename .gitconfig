@@ -7,23 +7,24 @@
 	d = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	done = "!f() { git checkout master && git pull && git cleanup; }; f"
 	dt = difftool -d
-	mt = mergetool
 	edit = "!${GIT_EDITOR-$EDITOR} .git/config"
 	fp = first-push
 	h = pretty-log -1
-	lab = repo lab
-	sh = pretty-head
-	r = pretty-log -30
-	ra = r --all
 	l = pretty-log
 	la = l --all
+	lab = repo lab
 	lns = log --name-status --decorate=short
 	man = help
+	mt = mergetool
 	pr = pull-request
+	r = pretty-log -30
+	ra = r --all
+	sh = pretty-head
 	st = status
-	wt = worktree
-	wl = worktree list
 	vimdiff = difftool -y -t vimdiff
+	wl = worktree list
+	wt = worktree
+  dft = difftool -t difftastic
 [color]
 	ui = auto
 [core]
@@ -36,7 +37,9 @@
 [difftool]
 	prompt = false
 [difftool "bc"]
-	cmd = bcomp -expandall "$LOCAL" "$REMOTE"
+  cmd = bcomp -expandall "$LOCAL" "$REMOTE"
+[difftool "difftastic"]
+  cmd = difft --color=always --display=inline "$LOCAL" "$REMOTE"
 [diff]
 	tool = bc
 	algorithm = patience
