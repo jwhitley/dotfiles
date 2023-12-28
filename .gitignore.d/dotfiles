@@ -1,26 +1,33 @@
 *
 !/.ackrc
-!/.bazaar
-!/.bazaar/bazaar.conf
-!/.bazaar/ignore
-!/.bazaar/plugins
-!/.bazaar/plugins/pager
-!/.bazaar/plugins/pager/__init__.py
-!/.bazaar/plugins/pager/setup.py
+!/.agignore
 !/.coffeelint
+!/.config
+!/.config/bat
+!/.config/bat/config
+!/.config/kitty
+!/.config/kitty/kitty.conf
 !/.ctags
 !/.ghci
 !/.git-global-ignores
+!/.gitattributes
 !/.gitconfig
 !/.gitignore.d
 !/.gitignore.d/dotfiles
 !/.hgignore_global
 !/.htoprc
+!/.hyper.js
 !/.irbrc
 !/.jshintrc
+!/.nodenv
+!/.nodenv/default-packages
 !/.npmrc
 !/.powconfig
 !/.pryrc
 !/.screenrc
 !/.tmux.conf
 !/.vimperatorrc
+!/Library
+!/Library/Application Support
+!/Library/Application Support/lazygit
+!/Library/Application Support/lazygit/config.yml
