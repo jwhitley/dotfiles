@@ -24,7 +24,7 @@
 	vimdiff = difftool -y -t vimdiff
 	wl = worktree list
 	wt = worktree
-  dft = difftool -t difftastic
+	dft = difftool -t difftastic
 [color]
 	ui = auto
 [core]
@@ -37,9 +37,9 @@
 [difftool]
 	prompt = false
 [difftool "bc"]
-  cmd = bcomp -expandall "$LOCAL" "$REMOTE"
+	cmd = bcomp -expandall "$LOCAL" "$REMOTE"
 [difftool "difftastic"]
-  cmd = difft --color=always --display=inline "$LOCAL" "$REMOTE"
+	cmd = difft --color=always --display=inline "$LOCAL" "$REMOTE"
 [diff]
 	tool = bc
 	algorithm = patience
@@ -50,7 +50,7 @@
 	textconv = js-beautify
 	cachetextconv = true
 [diff "swift"]
-    xfuncname = ^[ \t]*(((private |public |internal |final |open )*class|(private |public |internal )*struct|(private |public |internal )*actor|(private |public |internal )*func|(private |public |internal )*extension|(private |public |internal )*enum)[ \t].*)$
+	xfuncname = ^[ \t]*(((private |public |internal |final |open )*class|(private |public |internal )*struct|(private |public |internal )*actor|(private |public |internal )*func|(private |public |internal )*extension|(private |public |internal )*enum)[ \t].*)$
 [merge]
 	tool = bc
 [mergetool]
@@ -61,6 +61,7 @@
 [pull]
 	rebase = true
 [push]
+	autoSetupRemote = true
 	default = upstream
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -68,6 +69,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 [include]
-  path = .gitconfig.local
+	path = .gitconfig.local
 [init]
 	defaultBranch = main
