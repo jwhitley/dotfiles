@@ -7,6 +7,8 @@
 !/.config/bat/config
 !/.config/kitty
 !/.config/kitty/kitty.conf
+!/.config/lazygit
+!/.config/lazygit/config.yml
 !/.ctags
 !/.ghci
 !/.git-global-ignores
@@ -27,7 +29,3 @@
 !/.screenrc
 !/.tmux.conf
 !/.vimperatorrc
-!/Library
-!/Library/Application Support
-!/Library/Application Support/lazygit
-!/Library/Application Support/lazygit/config.yml
