@@ -2,6 +2,7 @@ gui:
   theme:
     selectedLineBgColor:
       - '#00649E'
+  nerdFontsVersion: "3"
 git:
   paging:
     colorArg: always
