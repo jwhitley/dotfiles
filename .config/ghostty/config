@@ -1,0 +1,55 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/whitley/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+font-family = DankMono Nerd Font Mono
+font-size = 18
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+keybind = cmd+zero=text:\x1d\x30
+keybind = cmd+one=text:\x1d\x31
+keybind = cmd+two=text:\x1d\x32
+keybind = cmd+three=text:\x1d\x33
+keybind = cmd+four=text:\x1d\x34
+keybind = cmd+five=text:\x1d\x35
+keybind = cmd+six=text:\x1d\x36
+keybind = cmd+seven=text:\x1d\x37
+keybind = cmd+eight=text:\x1d\x38
+keybind = cmd+nine=text:\x1d\x39
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+background = #000000
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
